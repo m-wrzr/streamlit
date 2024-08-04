@@ -98,6 +98,7 @@ class ForwardMsgQueue:
                 for msg in self._queue
                 if msg.WhichOneof("type")
                 in {
+                    "delta",
                     "new_session",
                     "script_finished",
                     "session_status_changed",

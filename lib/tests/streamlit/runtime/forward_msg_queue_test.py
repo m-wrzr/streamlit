@@ -220,7 +220,7 @@ class ForwardMsgQueueTest(unittest.TestCase):
         parent_msg.parent_message.message = "hello"
 
         fmq.enqueue(NEW_SESSION_MSG)
-        fmq.enqueue(TEXT_DELTA_MSG1)
+        fmq.enqueue(ADD_BLOCK_MSG)
         fmq.enqueue(script_finished_msg)
         fmq.enqueue(session_status_changed_msg)
         fmq.enqueue(parent_msg)
